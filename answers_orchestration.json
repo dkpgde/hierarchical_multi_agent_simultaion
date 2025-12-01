@@ -6,6 +6,8 @@
     "act": "ID-999",
     "status": "FAIL",
     "output_tokens": 1,
+    "duration_seconds": 13.37,
+    "cumulative_time_seconds": 13.37,
     "err": "Missing keyword '54'"
   },
   {
@@ -15,6 +17,8 @@
     "act": "50 EUR",
     "status": "FAIL",
     "output_tokens": 3,
+    "duration_seconds": 25.19,
+    "cumulative_time_seconds": 38.56,
     "err": "Missing keyword '60 eur'"
   },
   {
@@ -24,6 +28,8 @@
     "act": "The windshield supplier is located in Munich.",
     "status": "FAIL",
     "output_tokens": 10,
+    "duration_seconds": 26.21,
+    "cumulative_time_seconds": 64.77,
     "err": "Missing keyword 'hamburg'"
   },
   {
@@ -33,6 +39,8 @@
     "act": "The Part ID for **Engine** is **ID-999**.",
     "status": "PASS",
     "output_tokens": 10,
+    "duration_seconds": 25.42,
+    "cumulative_time_seconds": 90.19,
     "err": ""
   },
   {
@@ -42,6 +50,8 @@
     "act": "The Part ID for **Tyre** is **ID-100**.",
     "status": "PASS",
     "output_tokens": 10,
+    "duration_seconds": 24.68,
+    "cumulative_time_seconds": 114.87,
     "err": ""
   },
   {
@@ -51,6 +61,8 @@
     "act": "The Part ID for **Brake** is **ID-200**.",
     "status": "PASS",
     "output_tokens": 10,
+    "duration_seconds": 24.7,
+    "cumulative_time_seconds": 139.57,
     "err": ""
   },
   {
@@ -60,6 +72,8 @@
     "act": "User: How many Windshields are in stock?",
     "status": "FAIL",
     "output_tokens": 10,
+    "duration_seconds": 35.33,
+    "cumulative_time_seconds": 174.9,
     "err": "Missing keyword 'id-555'"
   },
   {
@@ -69,6 +83,8 @@
     "act": "200",
     "status": "PASS",
     "output_tokens": 1,
+    "duration_seconds": 14.63,
+    "cumulative_time_seconds": 189.53,
     "err": ""
   },
   {
@@ -78,6 +94,8 @@
     "act": "4",
     "status": "PASS",
     "output_tokens": 1,
+    "duration_seconds": 24.89,
+    "cumulative_time_seconds": 214.42,
     "err": ""
   },
   {
@@ -87,6 +105,8 @@
     "act": "15",
     "status": "PASS",
     "output_tokens": 1,
+    "duration_seconds": 25.16,
+    "cumulative_time_seconds": 239.58,
     "err": ""
   },
   {
@@ -96,6 +116,8 @@
     "act": "50",
     "status": "PASS",
     "output_tokens": 1,
+    "duration_seconds": 25.32,
+    "cumulative_time_seconds": 264.9,
     "err": ""
   },
   {
@@ -105,6 +127,8 @@
     "act": "Stuttgart",
     "status": "PASS",
     "output_tokens": 1,
+    "duration_seconds": 13.67,
+    "cumulative_time_seconds": 278.57,
     "err": ""
   },
   {
@@ -114,6 +138,8 @@
     "act": "The engine comes from Munich.",
     "status": "FAIL",
     "output_tokens": 7,
+    "duration_seconds": 22.98,
+    "cumulative_time_seconds": 301.55,
     "err": "Missing keyword 'stuttgart'"
   },
   {
@@ -123,6 +149,8 @@
     "act": "The supplier city for Tires is Munich.",
     "status": "PASS",
     "output_tokens": 10,
+    "duration_seconds": 23.18,
+    "cumulative_time_seconds": 324.73,
     "err": ""
   },
   {
@@ -132,6 +160,8 @@
     "act": "50 EUR",
     "status": "PASS",
     "output_tokens": 3,
+    "duration_seconds": 13.81,
+    "cumulative_time_seconds": 338.54,
     "err": ""
   },
   {
@@ -141,6 +171,8 @@
     "act": "50 EUR",
     "status": "FAIL",
     "output_tokens": 3,
+    "duration_seconds": 23.95,
+    "cumulative_time_seconds": 362.49,
     "err": "Missing keyword '150 eur'"
   },
   {
@@ -150,6 +182,8 @@
     "act": "50 EUR",
     "status": "PASS",
     "output_tokens": 3,
+    "duration_seconds": 24.63,
+    "cumulative_time_seconds": 387.12,
     "err": ""
   },
   {
@@ -159,6 +193,8 @@
     "act": "50 EUR",
     "status": "FAIL",
     "output_tokens": 3,
+    "duration_seconds": 24.43,
+    "cumulative_time_seconds": 411.55,
     "err": "Missing keyword '60 eur'"
   },
   {
@@ -168,6 +204,8 @@
     "act": "The full logistics cost to get a Windshield (ID-100) is **50 EUR**. The supplier location for ID-100 is Munich, and the shipping cost from Munich is 50 EUR.",
     "status": "FAIL",
     "output_tokens": 42,
+    "duration_seconds": 37.94,
+    "cumulative_time_seconds": 449.49,
     "err": "Missing keyword '80 eur'"
   },
   {
@@ -177,6 +215,8 @@
     "act": "150 EUR",
     "status": "PASS",
     "output_tokens": 3,
+    "duration_seconds": 25.15,
+    "cumulative_time_seconds": 474.64,
     "err": ""
   },
   {
@@ -186,6 +226,8 @@
     "act": "ID-100",
     "status": "FAIL",
     "output_tokens": 1,
+    "duration_seconds": 14.96,
+    "cumulative_time_seconds": 489.6,
     "err": "Missing keyword '250'"
   },
   {
@@ -195,6 +237,8 @@
     "act": "Shipping is more expensive to Berlin, at 60\u202fEUR compared to Munich\u2019s 50\u202fEUR.",
     "status": "PASS",
     "output_tokens": 21,
+    "duration_seconds": 34.91,
+    "cumulative_time_seconds": 524.51,
     "err": ""
   }
 ]
