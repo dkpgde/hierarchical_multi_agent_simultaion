@@ -1,7 +1,7 @@
 import json
 import os
 
-DATA_FILE = 'answers_mcp_qwen.json'   
+DATA_FILE = 'answers_code_granite.json'   
 
 def calculate_average_tokens(filepath: str) -> float:
     if not os.path.exists(filepath):

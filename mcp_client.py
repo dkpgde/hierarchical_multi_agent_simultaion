@@ -5,7 +5,7 @@ from contextlib import asynccontextmanager
 from typing import AsyncGenerator, Annotated, TypedDict, Type, Any
 
 from pydantic import BaseModel, Field, create_model
-from langchain_core.messages import BaseMessage, HumanMessage
+from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
 from langchain_core.tools import StructuredTool
 from langchain_ollama import ChatOllama
 
@@ -16,7 +16,7 @@ from langgraph.prebuilt import ToolNode, tools_condition
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
-MODEL_NAME = "qwen2.5:14b"
+MODEL_NAME = "qwen2.5:14B"
 SERVER_SCRIPT = "mcp_server.py"
 
 def jsonschema_to_pydantic(name: str, schema: dict) -> Type[BaseModel]:
@@ -36,10 +36,8 @@ def jsonschema_to_pydantic(name: str, schema: dict) -> Type[BaseModel]:
     for field_name, detail in properties.items():
         json_type = detail.get("type", "string")
         py_type = type_map.get(json_type, str)
-        
         is_required = field_name in required
         default = ... if is_required else None
-        
         description = detail.get("description", "")
         fields[field_name] = (py_type, Field(default=default, description=description))
 
@@ -49,7 +47,7 @@ class AgentState(TypedDict):
     messages: Annotated[list[BaseMessage], add_messages]
 
 @asynccontextmanager
-async def mcp_server_context() -> AsyncGenerator:
+async def mcp_server_context(mode: str = "standard") -> AsyncGenerator:
     if not os.path.exists(SERVER_SCRIPT):
         raise FileNotFoundError(f"Server script not found: {SERVER_SCRIPT}")
 
@@ -62,7 +60,7 @@ async def mcp_server_context() -> AsyncGenerator:
         env=env
     )
 
-    print(f"Connecting to MCP Server ({SERVER_SCRIPT})...")
+    print(f"Connecting to MCP Server ({SERVER_SCRIPT}) in {mode.upper()} mode...")
     
     try:
         async with stdio_client(server_params) as (read, write):
@@ -73,6 +71,9 @@ async def mcp_server_context() -> AsyncGenerator:
                 langchain_tools = []
 
                 for tool in mcp_tools.tools:
+                    if mode == "standard" and tool.name == "execute_python_code":
+                        continue
+                        
                     def create_tool_wrapper(tool_name):
                         async def wrapper(**kwargs):
                             return await session.call_tool(tool_name, arguments=kwargs)
@@ -88,7 +89,7 @@ async def mcp_server_context() -> AsyncGenerator:
                         args_schema=args_schema
                     ))
                 
-                print(f"Loaded {len(langchain_tools)} tools with schemas.")
+                print(f"Loaded {len(langchain_tools)} tools.")
 
                 llm = ChatOllama(model=MODEL_NAME, temperature=0, num_ctx=4096)
                 llm_with_tools = llm.bind_tools(langchain_tools)
@@ -111,24 +112,43 @@ async def mcp_server_context() -> AsyncGenerator:
         print(f"\nError: {e}")
         raise
 
-async def run_agent_interactive():
-    async with mcp_server_context() as agent:
-        print("Ready. Type 'quit' to exit.")
+async def run_interactive(mode="standard"):
+    """Interactive test mode without a system prompt"""   
+    async with mcp_server_context(mode=mode) as agent:
+        print(f"{mode.title()} Mode Ready. Type 'quit' to exit.")
+        
         while True:
-            user_input = input("\nUser: ")
+            user_input = input(f"\n({mode}) User: ")
             if user_input.lower() in ["quit", "exit"]: break
             
-            inputs = {"messages": [HumanMessage(content=user_input)]}
-            async for chunk in agent.astream(inputs, stream_mode="values"):
+            messages = [
+                HumanMessage(content=user_input)
+            ]
+            
+            print("Thinking", end="", flush=True)
+            
+            async for chunk in agent.astream({"messages": messages}, stream_mode="values"):
                 message = chunk["messages"][-1]
+                
                 if hasattr(message, "tool_calls") and message.tool_calls:
+                    print() 
                     for tc in message.tool_calls:
-                        print(f"Tool call: {tc['name']}({tc['args']})")
-                elif message.type == "ai":
-                    print(f"Agent: {message.content}")
+                        if tc['name'] == 'execute_python_code':
+                            print(f" Generating Code")
+                        else:
+                            print(f"Tool call: {tc['name']}({tc['args']})")
+                            
+                elif message.type == "ai" and not message.tool_calls:
+                    print(f"\rAgent: {message.content}")
 
 if __name__ == "__main__":
     try:
-        asyncio.run(run_agent_interactive())
+        print("Select Mode:")
+        print("1. Standard (Chain of Thought / Step-by-Step Tools)")
+        print("2. Code Mode (Write & Execute Python Scripts)")
+        choice = input("Choice (1/2): ").strip()
+        
+        mode = "code" if choice == "2" else "standard"
+        asyncio.run(run_interactive(mode))
     except KeyboardInterrupt:
         pass

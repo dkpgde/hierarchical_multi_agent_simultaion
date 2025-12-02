@@ -3,21 +3,27 @@ import time
 import asyncio
 import os
 import requests
-from langchain_core.messages import SystemMessage, HumanMessage, AIMessage, ToolMessage
+from langchain_core.messages import SystemMessage, HumanMessage
 from mcp_client import mcp_server_context
 
-ANSWERS_FILE = "answers_mcp_granite.json"
-MODEL_NAME = "granite4:tiny-h"
+ANSWERS_FILE = "answers_code_qwen.json"
+MODEL_NAME = "qwen2.5:14B"
 OLLAMA_TOKENIZE_URL = "http://localhost:11434/api/tokenize"
 
-SYSTEM_PROMPT = """You are an expert SCM Assistant. 
-You have access to specific tools to find Part IDs, check stock, and calculate shipping.
+SYSTEM_PROMPT = """You are an expert SCM Python Engineer.
+Instead of calling tools one by one, you MUST write a Python script to solve the user's problem.
 
-CRITICAL RULES:
-1. You MUST use the provided tools to get real data. DO NOT guess or hallucinate IDs.
-2. Always search for the **Part ID** first using `find_part_id`.
-3. To find shipping, you must first find the supplier city for that ID, then calculate shipping for that city.
-4. Do not describe what you are doing. Just execute the tool calls.
+You have access to a tool called `execute_python_code`.
+Inside this tool, the following functions are ALREADY available (do not import them):
+- get_part_id(name) -> str
+- get_stock_level(id) -> str
+- get_supplier_location(id) -> str
+- get_shipping_cost(city) -> str
+
+STRATEGY:
+1. Write a SINGLE script that chains these calls together.
+2. Use variables to store results (e.g., `pid = get_part_id("Engine")`).
+3. Use `print()` to output the final answer.
 """
 
 def count_tokens(text: str) -> int:
@@ -58,9 +64,9 @@ async def run_evaluation():
     cases = load_test_cases()
     logs = []
     
-    print(f"Evaluating {len(cases)} cases against MCP Agent ({MODEL_NAME})...")
+    print(f"Evaluating {len(cases)} cases in CODE MODE ({MODEL_NAME})...")
     
-    async with mcp_server_context() as agent:
+    async with mcp_server_context(mode="code") as agent:
         for case in cases:
             print(f"\nRunning Q{case['id']}: {case['q']}")
             start = time.time()
@@ -86,8 +92,6 @@ async def run_evaluation():
                 
                 if exp in final_out.lower():
                     status = "PASS"
-                elif "refusal" in exp and any(x in final_out.lower() for x in ["cannot", "sorry", "scope", "unable"]):
-                    status = "PASS (Refusal)"
                 
                 print(f"   -> {status} (Time: {duration:.2f}s)")
                 log_debug(logs, case, final_out, status, duration, input_tokens, output_tokens)
@@ -98,7 +102,7 @@ async def run_evaluation():
 
     passed = len([l for l in logs if "PASS" in l["status"]])
     print("\n" + "="*50)
-    print(f"Evaluation Complete. Score: {passed}/{len(cases)}")
+    print(f"Code Mode Evaluation Complete. Score: {passed}/{len(cases)}")
     print(f"Detailed logs saved to {ANSWERS_FILE}")
 
 if __name__ == "__main__":

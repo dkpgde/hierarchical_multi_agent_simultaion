@@ -1,6 +1,9 @@
 import sys
 import os
 import logging
+import io
+import contextlib
+import traceback
 
 sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
@@ -18,7 +21,6 @@ except ImportError as e:
     sys.exit(1)
 
 mcp = FastMCP("SCM_Logistics_Server")
-
 
 @mcp.tool()
 def find_part_id(part_name: str) -> str:
@@ -60,6 +62,55 @@ def calculate_shipping(city: str) -> str:
         city: The name of the city (e.g., "Stuttgart", "Berlin").
     """
     return get_shipping_cost(city)
+
+@mcp.tool()
+def execute_python_code(code: str) -> str:
+    """
+    Executes a Python script to answer complex SCM questions.
+    
+    AVAILABLE FUNCTIONS (Already imported):
+    - get_part_id(part_name: str) -> str
+    - get_stock_level(part_id: str) -> str
+    - get_supplier_location(part_id: str) -> str
+    - get_shipping_cost(city: str) -> str
+    
+    USAGE:
+    - Write a script that calls these functions to solve the problem.
+    - You MUST use print() to output the final answer or intermediate results.
+    - Do not import these functions; they are pre-loaded.
+    
+    Example:
+      pid = get_part_id("Engine")
+      loc = get_supplier_location(pid)
+      print(f"Location is {loc}")
+    """
+    logger.info("Executing Code Mode script...")
+    
+    sandbox_globals = {
+        "get_part_id": get_part_id,
+        "find_part_id": get_part_id, 
+        "get_stock_level": get_stock_level,
+        "check_stock": get_stock_level,
+        "get_supplier_location": get_supplier_location,
+        "find_supplier_city": get_supplier_location,
+        "get_shipping_cost": get_shipping_cost,
+        "calculate_shipping": get_shipping_cost,
+        "print": print
+    }
+    
+    output_capture = io.StringIO()
+    
+    try:
+        with contextlib.redirect_stdout(output_capture):
+            exec(code, sandbox_globals)
+        
+        result = output_capture.getvalue()
+        if not result.strip():
+            return "Code executed successfully but printed no output. Did you forget print()?"
+        return result
+        
+    except Exception as e:
+        return f"RUNTIME ERROR:\n{traceback.format_exc()}"
 
 if __name__ == "__main__":
     mcp.run()
