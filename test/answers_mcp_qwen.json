@@ -5,11 +5,12 @@
     "exp": "54",
     "act": "The total inventory count for Engines and Brakes is:\n- Engines: 4 units\n- Brakes: 50 units",
     "status": "FAIL",
-    "input_tokens": 139.5,
-    "output_tokens": 25.5,
-    "total_tokens": 165.0,
-    "duration_seconds": 113.46,
-    "cumulative_time_seconds": 113.46
+    "input_tokens": 2178,
+    "output_tokens": 116,
+    "total_tokens": 2294,
+    "cumulative_total_tokens": 2294,
+    "duration_seconds": 130.2,
+    "cumulative_time_seconds": 130.2
   },
   {
     "id": 2,
@@ -17,11 +18,12 @@
     "exp": "60 EUR",
     "act": "The shipping cost to get a Brake from Berlin is 150 EUR.",
     "status": "FAIL",
-    "input_tokens": 138.0,
-    "output_tokens": 18.0,
-    "total_tokens": 156.0,
-    "duration_seconds": 43.0,
-    "cumulative_time_seconds": 156.46
+    "input_tokens": 2035,
+    "output_tokens": 86,
+    "total_tokens": 2121,
+    "cumulative_total_tokens": 4415,
+    "duration_seconds": 44.03,
+    "cumulative_time_seconds": 174.23
   },
   {
     "id": 3,
@@ -29,11 +31,12 @@
     "exp": "Hamburg",
     "act": "The supplier for the Windshield is located in Hamburg.",
     "status": "PASS",
-    "input_tokens": 133.5,
-    "output_tokens": 13.5,
-    "total_tokens": 147.0,
-    "duration_seconds": 29.86,
-    "cumulative_time_seconds": 186.32
+    "input_tokens": 1965,
+    "output_tokens": 60,
+    "total_tokens": 2025,
+    "cumulative_total_tokens": 6440,
+    "duration_seconds": 29.91,
+    "cumulative_time_seconds": 204.14
   },
   {
     "id": 4,
@@ -41,11 +44,12 @@
     "exp": "ID-999",
     "act": "The ID for the Engine is ID-999. \n\nWhat would you like to do next? If you need information about this part's stock or shipping details, let me know.",
     "status": "PASS",
-    "input_tokens": 135.0,
-    "output_tokens": 42.0,
-    "total_tokens": 177.0,
-    "duration_seconds": 26.05,
-    "cumulative_time_seconds": 212.37
+    "input_tokens": 1233,
+    "output_tokens": 61,
+    "total_tokens": 1294,
+    "cumulative_total_tokens": 7734,
+    "duration_seconds": 24.98,
+    "cumulative_time_seconds": 229.12
   },
   {
     "id": 5,
@@ -53,11 +57,12 @@
     "exp": "ID-100",
     "act": "The current stock for the Tyre (ID-100) is 200 units. The supplier city is Munich and the shipping cost to transport items from there is 50 EUR.",
     "status": "PASS",
-    "input_tokens": 133.5,
-    "output_tokens": 40.5,
-    "total_tokens": 174.0,
-    "duration_seconds": 62.07,
-    "cumulative_time_seconds": 274.44
+    "input_tokens": 2909,
+    "output_tokens": 135,
+    "total_tokens": 3044,
+    "cumulative_total_tokens": 10778,
+    "duration_seconds": 64.37,
+    "cumulative_time_seconds": 293.49
   },
   {
     "id": 6,
@@ -65,11 +70,12 @@
     "exp": "ID-200",
     "act": "The current stock for the Brake (ID-200) is 50 units. The supplier city is Berlin and the shipping cost to transport items from there is 60 EUR.",
     "status": "PASS",
-    "input_tokens": 133.5,
-    "output_tokens": 40.5,
-    "total_tokens": 174.0,
-    "duration_seconds": 59.62,
-    "cumulative_time_seconds": 334.06
+    "input_tokens": 2891,
+    "output_tokens": 131,
+    "total_tokens": 3022,
+    "cumulative_total_tokens": 13800,
+    "duration_seconds": 64.64,
+    "cumulative_time_seconds": 358.13
   },
   {
     "id": 7,
@@ -77,11 +83,12 @@
     "exp": "ID-555",
     "act": "The Part ID for the Windshield is ID-555. \n\nWould you like to know more about this part? (e.g., stock level or shipping cost)",
     "status": "PASS",
-    "input_tokens": 135.0,
-    "output_tokens": 34.5,
-    "total_tokens": 169.5,
-    "duration_seconds": 25.33,
-    "cumulative_time_seconds": 359.39
+    "input_tokens": 1236,
+    "output_tokens": 59,
+    "total_tokens": 1295,
+    "cumulative_total_tokens": 15095,
+    "duration_seconds": 24.26,
+    "cumulative_time_seconds": 382.39
   },
   {
     "id": 8,
@@ -89,11 +96,12 @@
     "exp": "200",
     "act": "The current stock level for part ID-100 is 200.",
     "status": "PASS",
-    "input_tokens": 133.5,
-    "output_tokens": 13.5,
-    "total_tokens": 147.0,
-    "duration_seconds": 21.64,
-    "cumulative_time_seconds": 381.03
+    "input_tokens": 1238,
+    "output_tokens": 43,
+    "total_tokens": 1281,
+    "cumulative_total_tokens": 16376,
+    "duration_seconds": 20.61,
+    "cumulative_time_seconds": 403.0
   },
   {
     "id": 9,
@@ -101,11 +109,12 @@
     "exp": "4",
     "act": "We have 4 Engines in stock.",
     "status": "PASS",
-    "input_tokens": 133.5,
-    "output_tokens": 9.0,
-    "total_tokens": 142.5,
-    "duration_seconds": 28.62,
-    "cumulative_time_seconds": 409.65
+    "input_tokens": 1957,
+    "output_tokens": 55,
+    "total_tokens": 2012,
+    "cumulative_total_tokens": 18388,
+    "duration_seconds": 29.89,
+    "cumulative_time_seconds": 432.89
   },
   {
     "id": 10,
@@ -113,11 +122,12 @@
     "exp": "15",
     "act": "The current inventory for Windshields (ID-555) is 15 units.",
     "status": "PASS",
-    "input_tokens": 130.5,
-    "output_tokens": 13.5,
-    "total_tokens": 144.0,
-    "duration_seconds": 32.56,
-    "cumulative_time_seconds": 442.21
+    "input_tokens": 1961,
+    "output_tokens": 68,
+    "total_tokens": 2029,
+    "cumulative_total_tokens": 20417,
+    "duration_seconds": 32.39,
+    "cumulative_time_seconds": 465.28
   },
   {
     "id": 11,
@@ -125,11 +135,12 @@
     "exp": "50",
     "act": "The Brake (Part ID: ID-200) is in stock with a quantity of 50.",
     "status": "PASS",
-    "input_tokens": 132.0,
-    "output_tokens": 19.5,
-    "total_tokens": 151.5,
-    "duration_seconds": 32.97,
-    "cumulative_time_seconds": 475.18
+    "input_tokens": 1958,
+    "output_tokens": 71,
+    "total_tokens": 2029,
+    "cumulative_total_tokens": 22446,
+    "duration_seconds": 32.69,
+    "cumulative_time_seconds": 497.97
   },
   {
     "id": 12,
@@ -137,11 +148,12 @@
     "exp": "Stuttgart",
     "act": "The supplier for ID-999 is located in Stuttgart.",
     "status": "PASS",
-    "input_tokens": 135.0,
-    "output_tokens": 12.0,
-    "total_tokens": 147.0,
-    "duration_seconds": 20.82,
-    "cumulative_time_seconds": 496.0
+    "input_tokens": 1239,
+    "output_tokens": 40,
+    "total_tokens": 1279,
+    "cumulative_total_tokens": 23725,
+    "duration_seconds": 19.57,
+    "cumulative_time_seconds": 517.54
   },
   {
     "id": 13,
@@ -149,11 +161,12 @@
     "exp": "Stuttgart",
     "act": "The Engine comes from Stuttgart.",
     "status": "PASS",
-    "input_tokens": 133.5,
-    "output_tokens": 7.5,
-    "total_tokens": 141.0,
-    "duration_seconds": 28.89,
-    "cumulative_time_seconds": 524.89
+    "input_tokens": 1960,
+    "output_tokens": 54,
+    "total_tokens": 2014,
+    "cumulative_total_tokens": 25739,
+    "duration_seconds": 28.57,
+    "cumulative_time_seconds": 546.11
   },
   {
     "id": 14,
@@ -161,11 +174,12 @@
     "exp": "Munich",
     "act": "There is a persistent issue with the Part ID for Tires. Let's try to find the correct information manually or contact support.\n\nSince we are unable to proceed due to an error, I will stop here and suggest reaching out to support for further assistance. The last known correct Part ID for Tires was ID-902 but it is not found in the supplier database currently.",
     "status": "FAIL",
-    "input_tokens": 133.5,
-    "output_tokens": 97.5,
-    "total_tokens": 231.0,
-    "duration_seconds": 257.1,
-    "cumulative_time_seconds": 781.99
+    "input_tokens": 15668,
+    "output_tokens": 606,
+    "total_tokens": 16274,
+    "cumulative_total_tokens": 42013,
+    "duration_seconds": 291.45,
+    "cumulative_time_seconds": 837.56
   },
   {
     "id": 15,
@@ -173,11 +187,12 @@
     "exp": "50 EUR",
     "act": "The shipping cost from Munich is 50 EUR.",
     "status": "PASS",
-    "input_tokens": 135.0,
-    "output_tokens": 12.0,
-    "total_tokens": 147.0,
-    "duration_seconds": 19.03,
-    "cumulative_time_seconds": 801.02
+    "input_tokens": 1229,
+    "output_tokens": 34,
+    "total_tokens": 1263,
+    "cumulative_total_tokens": 43276,
+    "duration_seconds": 17.31,
+    "cumulative_time_seconds": 854.87
   },
   {
     "id": 16,
@@ -185,11 +200,12 @@
     "exp": "150 EUR",
     "act": "The shipping cost from the Engine supplier in Stuttgart is 150 EUR.",
     "status": "PASS",
-    "input_tokens": 136.5,
-    "output_tokens": 18.0,
-    "total_tokens": 154.5,
-    "duration_seconds": 43.54,
-    "cumulative_time_seconds": 844.56
+    "input_tokens": 2032,
+    "output_tokens": 85,
+    "total_tokens": 2117,
+    "cumulative_total_tokens": 45393,
+    "duration_seconds": 45.23,
+    "cumulative_time_seconds": 900.1
   },
   {
     "id": 17,
@@ -197,11 +213,12 @@
     "exp": "50 EUR",
     "act": "The shipping cost to transport tires from the supplier city (Munich) is 150 EUR.",
     "status": "PASS",
-    "input_tokens": 133.5,
-    "output_tokens": 21.0,
-    "total_tokens": 154.5,
-    "duration_seconds": 45.41,
-    "cumulative_time_seconds": 889.97
+    "input_tokens": 2030,
+    "output_tokens": 92,
+    "total_tokens": 2122,
+    "cumulative_total_tokens": 47515,
+    "duration_seconds": 47.47,
+    "cumulative_time_seconds": 947.57
   },
   {
     "id": 18,
@@ -209,11 +226,12 @@
     "exp": "60 EUR",
     "act": "The shipping cost for the Brake is 60 EUR.",
     "status": "PASS",
-    "input_tokens": 132.0,
-    "output_tokens": 13.5,
-    "total_tokens": 145.5,
-    "duration_seconds": 40.43,
-    "cumulative_time_seconds": 930.4
+    "input_tokens": 2755,
+    "output_tokens": 80,
+    "total_tokens": 2835,
+    "cumulative_total_tokens": 50350,
+    "duration_seconds": 42.8,
+    "cumulative_time_seconds": 990.37
   },
   {
     "id": 19,
@@ -221,11 +239,12 @@
     "exp": "80 EUR",
     "act": "The full logistics cost to get a Windshield is 150 EUR.",
     "status": "FAIL",
-    "input_tokens": 139.5,
-    "output_tokens": 16.5,
-    "total_tokens": 156.0,
-    "duration_seconds": 88.14,
-    "cumulative_time_seconds": 1018.54
+    "input_tokens": 2478,
+    "output_tokens": 166,
+    "total_tokens": 2644,
+    "cumulative_total_tokens": 52994,
+    "duration_seconds": 102.56,
+    "cumulative_time_seconds": 1092.93
   },
   {
     "id": 20,
@@ -233,11 +252,12 @@
     "exp": "150 EUR",
     "act": "The shipping cost for item ID-999 is 150 EUR.",
     "status": "PASS",
-    "input_tokens": 136.5,
-    "output_tokens": 13.5,
-    "total_tokens": 150.0,
-    "duration_seconds": 32.69,
-    "cumulative_time_seconds": 1051.23
+    "input_tokens": 1976,
+    "output_tokens": 64,
+    "total_tokens": 2040,
+    "cumulative_total_tokens": 55034,
+    "duration_seconds": 32.15,
+    "cumulative_time_seconds": 1125.08
   },
   {
     "id": 21,
@@ -245,11 +265,12 @@
     "exp": "250",
     "act": "The combined stock count of Tires and Brakes is 250.",
     "status": "PASS",
-    "input_tokens": 139.5,
-    "output_tokens": 15.0,
-    "total_tokens": 154.5,
-    "duration_seconds": 54.38,
-    "cumulative_time_seconds": 1105.61
+    "input_tokens": 2187,
+    "output_tokens": 107,
+    "total_tokens": 2294,
+    "cumulative_total_tokens": 57328,
+    "duration_seconds": 57.16,
+    "cumulative_time_seconds": 1182.24
   },
   {
     "id": 22,
@@ -257,10 +278,11 @@
     "exp": "Berlin",
     "act": "Shipping from Berlin is more expensive at 60 EUR compared to Munich which costs 50 EUR.",
     "status": "PASS",
-    "input_tokens": 138.0,
-    "output_tokens": 24.0,
-    "total_tokens": 162.0,
-    "duration_seconds": 33.8,
-    "cumulative_time_seconds": 1139.41
+    "input_tokens": 1298,
+    "output_tokens": 67,
+    "total_tokens": 1365,
+    "cumulative_total_tokens": 58693,
+    "duration_seconds": 33.44,
+    "cumulative_time_seconds": 1215.68
   }
 ]

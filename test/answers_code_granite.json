@@ -5,11 +5,12 @@
     "exp": "54",
     "act": "The total inventory count for Engines and Brakes combined is **54**.",
     "status": "PASS",
-    "input_tokens": 151.5,
-    "output_tokens": 16.5,
-    "total_tokens": 168.0,
-    "duration_seconds": 28.5,
-    "cumulative_time_seconds": 28.5
+    "input_tokens": 1853,
+    "output_tokens": 119,
+    "total_tokens": 1972,
+    "cumulative_total_tokens": 1972,
+    "duration_seconds": 29.47,
+    "cumulative_time_seconds": 29.47
   },
   {
     "id": 2,
@@ -17,11 +18,12 @@
     "exp": "60 EUR",
     "act": "The shipping cost to obtain a Brake is **60\u202fEUR**.",
     "status": "FAIL",
-    "input_tokens": 150.0,
-    "output_tokens": 15.0,
-    "total_tokens": 165.0,
-    "duration_seconds": 24.42,
-    "cumulative_time_seconds": 52.92
+    "input_tokens": 1816,
+    "output_tokens": 86,
+    "total_tokens": 1902,
+    "cumulative_total_tokens": 3874,
+    "duration_seconds": 28.66,
+    "cumulative_time_seconds": 58.13
   },
   {
     "id": 3,
@@ -29,11 +31,12 @@
     "exp": "Hamburg",
     "act": "",
     "status": "FAIL",
-    "input_tokens": 145.5,
-    "output_tokens": 0.0,
-    "total_tokens": 145.5,
-    "duration_seconds": 24.49,
-    "cumulative_time_seconds": 77.41
+    "input_tokens": 1758,
+    "output_tokens": 53,
+    "total_tokens": 1811,
+    "cumulative_total_tokens": 5685,
+    "duration_seconds": 26.76,
+    "cumulative_time_seconds": 84.89
   },
   {
     "id": 4,
@@ -41,11 +44,12 @@
     "exp": "ID-999",
     "act": "",
     "status": "FAIL",
-    "input_tokens": 147.0,
-    "output_tokens": 0.0,
-    "total_tokens": 147.0,
-    "duration_seconds": 13.36,
-    "cumulative_time_seconds": 90.77
+    "input_tokens": 844,
+    "output_tokens": 29,
+    "total_tokens": 873,
+    "cumulative_total_tokens": 6558,
+    "duration_seconds": 12.93,
+    "cumulative_time_seconds": 97.82
   },
   {
     "id": 5,
@@ -53,11 +57,12 @@
     "exp": "ID-100",
     "act": "The Part ID for **Tyre** is **ID-100**.",
     "status": "PASS",
-    "input_tokens": 145.5,
-    "output_tokens": 10.5,
-    "total_tokens": 156.0,
-    "duration_seconds": 24.58,
-    "cumulative_time_seconds": 115.35
+    "input_tokens": 1758,
+    "output_tokens": 46,
+    "total_tokens": 1804,
+    "cumulative_total_tokens": 8362,
+    "duration_seconds": 26.29,
+    "cumulative_time_seconds": 124.11
   },
   {
     "id": 6,
@@ -65,11 +70,12 @@
     "exp": "ID-200",
     "act": "The Part ID for **Brake** is **ID-200**.",
     "status": "PASS",
-    "input_tokens": 145.5,
-    "output_tokens": 10.5,
-    "total_tokens": 156.0,
-    "duration_seconds": 23.59,
-    "cumulative_time_seconds": 138.94
+    "input_tokens": 1756,
+    "output_tokens": 46,
+    "total_tokens": 1802,
+    "cumulative_total_tokens": 10164,
+    "duration_seconds": 26.46,
+    "cumulative_time_seconds": 150.57
   },
   {
     "id": 7,
@@ -77,11 +83,12 @@
     "exp": "ID-555",
     "act": "The Part ID for a **Windshield** is **ID-555**.",
     "status": "PASS",
-    "input_tokens": 147.0,
-    "output_tokens": 12.0,
-    "total_tokens": 159.0,
-    "duration_seconds": 24.63,
-    "cumulative_time_seconds": 163.57
+    "input_tokens": 1760,
+    "output_tokens": 47,
+    "total_tokens": 1807,
+    "cumulative_total_tokens": 11971,
+    "duration_seconds": 26.29,
+    "cumulative_time_seconds": 176.86
   },
   {
     "id": 8,
@@ -89,11 +96,12 @@
     "exp": "200",
     "act": "The current stock level for part ID\u2011100 is **200** units.",
     "status": "PASS",
-    "input_tokens": 145.5,
-    "output_tokens": 15.0,
-    "total_tokens": 160.5,
-    "duration_seconds": 24.15,
-    "cumulative_time_seconds": 187.72
+    "input_tokens": 1756,
+    "output_tokens": 46,
+    "total_tokens": 1802,
+    "cumulative_total_tokens": 13773,
+    "duration_seconds": 24.84,
+    "cumulative_time_seconds": 201.7
   },
   {
     "id": 9,
@@ -101,11 +109,12 @@
     "exp": "4",
     "act": "The script retrieved the stock level for the Engine part ID and printed **4** engines in inventory.",
     "status": "PASS",
-    "input_tokens": 145.5,
-    "output_tokens": 25.5,
-    "total_tokens": 171.0,
-    "duration_seconds": 24.98,
-    "cumulative_time_seconds": 212.7
+    "input_tokens": 1774,
+    "output_tokens": 71,
+    "total_tokens": 1845,
+    "cumulative_total_tokens": 15618,
+    "duration_seconds": 26.52,
+    "cumulative_time_seconds": 228.22
   },
   {
     "id": 10,
@@ -113,11 +122,12 @@
     "exp": "15",
     "act": "The part ID for **Windshields** is **ID-555**, and the current inventory level is **15 units**.",
     "status": "PASS",
-    "input_tokens": 142.5,
-    "output_tokens": 22.5,
-    "total_tokens": 165.0,
-    "duration_seconds": 26.13,
-    "cumulative_time_seconds": 238.83
+    "input_tokens": 2737,
+    "output_tokens": 80,
+    "total_tokens": 2817,
+    "cumulative_total_tokens": 18435,
+    "duration_seconds": 27.27,
+    "cumulative_time_seconds": 255.49
   },
   {
     "id": 11,
@@ -125,11 +135,12 @@
     "exp": "50",
     "act": "The Brake part (ID\u202f[ID\u2011BRK]) is currently in stock with **50 units** available.",
     "status": "PASS",
-    "input_tokens": 144.0,
-    "output_tokens": 19.5,
-    "total_tokens": 163.5,
-    "duration_seconds": 25.84,
-    "cumulative_time_seconds": 264.67
+    "input_tokens": 1771,
+    "output_tokens": 74,
+    "total_tokens": 1845,
+    "cumulative_total_tokens": 20280,
+    "duration_seconds": 26.46,
+    "cumulative_time_seconds": 281.95
   },
   {
     "id": 12,
@@ -137,11 +148,12 @@
     "exp": "Stuttgart",
     "act": "",
     "status": "FAIL",
-    "input_tokens": 147.0,
-    "output_tokens": 0.0,
-    "total_tokens": 147.0,
-    "duration_seconds": 14.27,
-    "cumulative_time_seconds": 278.94
+    "input_tokens": 846,
+    "output_tokens": 31,
+    "total_tokens": 877,
+    "cumulative_total_tokens": 21157,
+    "duration_seconds": 12.54,
+    "cumulative_time_seconds": 294.49
   },
   {
     "id": 13,
@@ -149,11 +161,12 @@
     "exp": "Stuttgart",
     "act": "The Engine comes from **Stuttgart**.",
     "status": "PASS",
-    "input_tokens": 145.5,
-    "output_tokens": 7.5,
-    "total_tokens": 153.0,
-    "duration_seconds": 25.1,
-    "cumulative_time_seconds": 304.04
+    "input_tokens": 1774,
+    "output_tokens": 59,
+    "total_tokens": 1833,
+    "cumulative_total_tokens": 22990,
+    "duration_seconds": 26.13,
+    "cumulative_time_seconds": 320.62
   },
   {
     "id": 14,
@@ -161,11 +174,12 @@
     "exp": "Munich",
     "act": "",
     "status": "FAIL",
-    "input_tokens": 145.5,
-    "output_tokens": 0.0,
-    "total_tokens": 145.5,
-    "duration_seconds": 24.92,
-    "cumulative_time_seconds": 328.96
+    "input_tokens": 1758,
+    "output_tokens": 53,
+    "total_tokens": 1811,
+    "cumulative_total_tokens": 24801,
+    "duration_seconds": 25.73,
+    "cumulative_time_seconds": 346.35
   },
   {
     "id": 15,
@@ -173,11 +187,12 @@
     "exp": "50 EUR",
     "act": "",
     "status": "FAIL",
-    "input_tokens": 147.0,
-    "output_tokens": 0.0,
-    "total_tokens": 147.0,
-    "duration_seconds": 15.57,
-    "cumulative_time_seconds": 344.53
+    "input_tokens": 844,
+    "output_tokens": 74,
+    "total_tokens": 918,
+    "cumulative_total_tokens": 25719,
+    "duration_seconds": 15.13,
+    "cumulative_time_seconds": 361.48
   },
   {
     "id": 16,
@@ -185,11 +200,12 @@
     "exp": "150 EUR",
     "act": "Shipping cost from Engine supplier: 150 EUR",
     "status": "PASS",
-    "input_tokens": 148.5,
-    "output_tokens": 10.5,
-    "total_tokens": 159.0,
-    "duration_seconds": 25.86,
-    "cumulative_time_seconds": 370.39
+    "input_tokens": 1810,
+    "output_tokens": 79,
+    "total_tokens": 1889,
+    "cumulative_total_tokens": 27608,
+    "duration_seconds": 28.21,
+    "cumulative_time_seconds": 389.69
   },
   {
     "id": 17,
@@ -197,11 +213,12 @@
     "exp": "50 EUR",
     "act": "The shipping cost from the Tire supplier's location is **50\u202fEUR**.",
     "status": "FAIL",
-    "input_tokens": 145.5,
-    "output_tokens": 16.5,
-    "total_tokens": 162.0,
-    "duration_seconds": 27.01,
-    "cumulative_time_seconds": 397.4
+    "input_tokens": 1813,
+    "output_tokens": 91,
+    "total_tokens": 1904,
+    "cumulative_total_tokens": 29512,
+    "duration_seconds": 28.93,
+    "cumulative_time_seconds": 418.62
   },
   {
     "id": 18,
@@ -209,11 +226,12 @@
     "exp": "60 EUR",
     "act": "Shipping cost for Brake from Berlin: $60 EUR",
     "status": "PASS",
-    "input_tokens": 144.0,
-    "output_tokens": 12.0,
-    "total_tokens": 156.0,
-    "duration_seconds": 26.68,
-    "cumulative_time_seconds": 424.08
+    "input_tokens": 1809,
+    "output_tokens": 83,
+    "total_tokens": 1892,
+    "cumulative_total_tokens": 31404,
+    "duration_seconds": 26.55,
+    "cumulative_time_seconds": 445.17
   },
   {
     "id": 19,
@@ -221,11 +239,12 @@
     "exp": "80 EUR",
     "act": "",
     "status": "FAIL",
-    "input_tokens": 151.5,
-    "output_tokens": 0.0,
-    "total_tokens": 151.5,
-    "duration_seconds": 23.49,
-    "cumulative_time_seconds": 447.57
+    "input_tokens": 1766,
+    "output_tokens": 53,
+    "total_tokens": 1819,
+    "cumulative_total_tokens": 33223,
+    "duration_seconds": 25.86,
+    "cumulative_time_seconds": 471.03
   },
   {
     "id": 20,
@@ -233,11 +252,12 @@
     "exp": "150 EUR",
     "act": "The shipping cost for item **ID-999** from its supplier city (Stuttgart) is **150\u202fEUR**.",
     "status": "FAIL",
-    "input_tokens": 148.5,
-    "output_tokens": 21.0,
-    "total_tokens": 169.5,
-    "duration_seconds": 24.37,
-    "cumulative_time_seconds": 471.94
+    "input_tokens": 1762,
+    "output_tokens": 55,
+    "total_tokens": 1817,
+    "cumulative_total_tokens": 35040,
+    "duration_seconds": 26.54,
+    "cumulative_time_seconds": 497.57
   },
   {
     "id": 21,
@@ -245,22 +265,24 @@
     "exp": "250",
     "act": "The combined stock count of Tires and Brakes is **250**.",
     "status": "PASS",
-    "input_tokens": 151.5,
-    "output_tokens": 15.0,
-    "total_tokens": 166.5,
-    "duration_seconds": 26.96,
-    "cumulative_time_seconds": 498.9
+    "input_tokens": 1833,
+    "output_tokens": 114,
+    "total_tokens": 1947,
+    "cumulative_total_tokens": 36987,
+    "duration_seconds": 29.76,
+    "cumulative_time_seconds": 527.33
   },
   {
     "id": 22,
     "q": "Which is more expensive to ship: Munich or Berlin?",
     "exp": "Berlin",
     "act": "",
-    "status": "FAIL",
-    "input_tokens": 150.0,
-    "output_tokens": 0.0,
-    "total_tokens": 150.0,
-    "duration_seconds": 16.41,
-    "cumulative_time_seconds": 515.31
+    "status": "15",
+    "input_tokens": 847,
+    "output_tokens": 89,
+    "total_tokens": 936,
+    "cumulative_total_tokens": 37923,
+    "duration_seconds": 15.77,
+    "cumulative_time_seconds": 543.1
   }
 ]
